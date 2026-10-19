@@ -42,8 +42,16 @@
 
   <header class="masthead">
     <div class="card id-card">
-      <h1>shlomo tannor</h1>
-      <p class="role">applied scientist, amazon</p>
+      <div class="id-head">
+        <!-- Drop a square photo at assets/portrait.jpg and it appears here;
+             until then onerror removes it so the card renders unchanged. -->
+        <img class="portrait" src="assets/portrait.jpg" alt="Shlomo Tannor"
+             width="72" height="72" loading="lazy" onerror="this.remove()">
+        <div>
+          <h1>shlomo tannor</h1>
+          <p class="role">applied scientist, amazon</p>
+        </div>
+      </div>
       <ul class="links">
         <li><a href="mailto:stannor@gmail.com">stannor@gmail.com</a></li>
         <li><a href="https://github.com/shlomota">github</a></li>

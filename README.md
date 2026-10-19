@@ -3,7 +3,7 @@
 Personal site — papers, projects, writing, and what I'm working on now.
 
 Plain HTML, CSS and ~90 lines of JavaScript. No build step, no framework, no dependencies
-beyond two Google Fonts. Open `index.html` in a browser and that's the whole thing.
+beyond two Google Fonts (Inter and IBM Plex Mono). Open `index.html` in a browser and that's the whole thing.
 
 ```
 index.html          all content
@@ -44,12 +44,10 @@ filter row to introduce one. Filters are deep-linkable: `?t=audio#projects`.
 
 **Add a post or a paper** — same idea, copy a sibling `<li>`. Newest first.
 
-**Colours and type** — the custom properties at the top of `assets/style.css`. The dark
-palette is defined twice on purpose (once under `prefers-color-scheme`, once under
-`[data-theme="dark"]`) so the toggle can override the OS in both directions.
+**Colours and type** — the custom properties at the top of `assets/style.css`. Dark is
+the unconditional default (`:root`); light is opt-in only, via the toggle, which sets
+`data-theme="light"` and remembers the choice in `localStorage`.
 
 ## Deliberately not here
 
-- No email address. Add one to the masthead `.links` list if you want to be reachable
-  directly rather than via LinkedIn.
-- No analytics.
+- No analytics, no cookies, no third-party scripts.

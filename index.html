@@ -4,19 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shlomo Tannor</title>
-<meta name="description" content="Shlomo Tannor — Applied Scientist at Amazon. Evaluation and benchmarking for DevOps and SRE agents. Papers, projects, and writing.">
+<meta name="description" content="Shlomo Tannor — Applied Scientist at Amazon. The science behind the AWS DevOps Agent: harnesses, evaluations, and benchmarks for agents in live environments.">
 <meta name="author" content="Shlomo Tannor">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shlomo Tannor">
-<meta property="og:description" content="Applied Scientist at Amazon. Evaluation and benchmarking for DevOps and SRE agents.">
+<meta property="og:description" content="Applied Scientist at Amazon. Harnesses, evaluations, and benchmarks for agents running in live environments.">
+<meta property="og:url" content="https://shlomota.github.io/">
 <meta name="twitter:card" content="summary">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif'%3E%E2%84%B5%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230c0e11'/%3E%3Ctext x='50' y='68' font-size='54' font-family='ui-monospace,monospace' fill='%235ccfae' text-anchor='middle'%3Est%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -29,58 +30,69 @@
 
 <nav class="rail" aria-label="Section navigation">
   <ol>
-    <li><a href="#now" data-rail>Now</a></li>
-    <li><a href="#papers" data-rail>Papers</a></li>
-    <li><a href="#projects" data-rail>Projects</a></li>
-    <li><a href="#writing" data-rail>Writing</a></li>
-    <li><a href="#background" data-rail>Background</a></li>
+    <li><a href="#now" data-rail>now</a></li>
+    <li><a href="#papers" data-rail>papers</a></li>
+    <li><a href="#projects" data-rail>projects</a></li>
+    <li><a href="#writing" data-rail>writing</a></li>
+    <li><a href="#background" data-rail>background</a></li>
   </ol>
 </nav>
 
 <main id="main">
 
   <header class="masthead">
-    <h1>Shlomo&nbsp;Tannor</h1>
-    <p class="standfirst">Applied Scientist at Amazon. I work on evaluating and benchmarking DevOps agents &mdash; measuring whether an agent actually mitigated the incident, and building the harnesses that tell us so.</p>
-    <p class="meta">New York, United States &nbsp;·&nbsp; M.Sc. Computer Science, Tel Aviv University</p>
-    <ul class="links">
-      <li><a href="https://github.com/shlomota">GitHub</a></li>
-      <li><a href="https://medium.com/@stannor">Medium</a></li>
-      <li><a href="https://www.linkedin.com/in/shlomo-tannor-aa967a1a8/">LinkedIn</a></li>
-      <li><a href="#papers">Papers</a></li>
-    </ul>
+    <div class="card id-card">
+      <h1>shlomo tannor</h1>
+      <p class="role">applied scientist, amazon</p>
+      <ul class="links">
+        <li><a href="mailto:stannor@gmail.com">stannor@gmail.com</a></li>
+        <li><a href="https://github.com/shlomota">github</a></li>
+        <li><a href="https://medium.com/@stannor">medium</a></li>
+        <li><a href="https://www.linkedin.com/in/shlomo-tannor-aa967a1a8/">linkedin</a></li>
+      </ul>
+    </div>
+    <p class="standfirst">I work on the science behind the <strong>AWS DevOps Agent</strong> &mdash; harnesses, evaluations, and benchmarks for agents operating in live production environments.</p>
   </header>
 
   <!-- ───────────────────────────────── NOW ─────────────────────────────── -->
   <section id="now" class="section">
-    <h2 class="rubric">Now</h2>
+    <h2 class="rubric">now</h2>
     <div class="prose">
-      <p>At AWS I sit on the science side of a production DevOps agent — the kind that gets paged, reads the telemetry, and proposes a mitigation. My work is the unglamorous half of that sentence: <em>how do you know it worked?</em></p>
-      <p>Agent evaluation is harder than model evaluation. A trajectory can reach the right answer through reasoning you would never ship, or fail for reasons that have nothing to do with the model. So most of my time goes into measurement that survives contact with production traffic.</p>
+      <p>An agent gets paged, reads the telemetry, and proposes a mitigation. My work is the half that comes after: <em>how do you know it worked?</em></p>
+      <p>Agent evaluation is harder than model evaluation. A trajectory can reach the right answer through reasoning you would never ship, or fail for reasons that have nothing to do with the model. So most of my time goes into measurement that survives contact with production.</p>
       <dl class="facets">
         <div>
-          <dt>SRE mitigation</dt>
-          <dd>Measuring whether an agent's proposed remediation is correct, safe, and actually resolves the incident — not merely plausible.</dd>
+          <dt>harnesses</dt>
+          <dd>Agentic harnesses that run and read real agent trajectories — the scaffolding that makes behaviour in a live environment measurable at all.</dd>
         </div>
         <div>
-          <dt>Benchmarking</dt>
-          <dd>Offline suites that discriminate between agent versions, and scalable online evaluation that keeps working once real customers are in the loop.</dd>
+          <dt>evaluation</dt>
+          <dd>Offline suites and scalable online evaluation: did the proposed SRE mitigation actually resolve the incident, or did it only look plausible?</dd>
         </div>
         <div>
-          <dt>Trajectory analysis</dt>
-          <dd>Agentic harnesses that read real agent runs to find confounders, trace which features helped, and turn failures into something a model can learn from.</dd>
+          <dt>benchmarks</dt>
+          <dd>Benchmarks for DevOps agents that discriminate between versions and keep holding up once real customer traffic is in the loop.</dd>
         </div>
       </dl>
-      <p class="aside">Previously: three years at Check Point training transformers to catch malicious email and account takeover, at a scale where false positives are expensive and attackers adapt weekly.</p>
+      <p class="aside">Before Amazon: three years at Check Point training transformers to catch malicious email and account takeover, at a scale where false positives are expensive and attackers adapt weekly.</p>
     </div>
   </section>
 
   <!-- ─────────────────────────────── PAPERS ────────────────────────────── -->
   <section id="papers" class="section">
-    <h2 class="rubric">Papers</h2>
-    <p class="section-note">Computational philology — using NLP to date, attribute, and recover rabbinic texts transmitted orally for centuries before anyone wrote them down.</p>
+    <h2 class="rubric">papers</h2>
+    <p class="section-note">Published work and talks — agents and LLMs at Amazon, computational philology before that.</p>
 
     <ol class="papers">
+      <li class="paper">
+        <div class="paper-year">2026</div>
+        <div class="paper-body">
+          <h3>Teaching LLMs to Query a Product Knowledge Graph for Real-Time Personalized Ad Serving</h3>
+          <p class="venue">Amazon Machine Learning Conference (AMLC) &nbsp;·&nbsp; <span class="tag-inline">highlight presentation</span></p>
+          <p class="abstract">Getting an LLM to turn intent into queries over a product knowledge graph, inside the latency budget that real-time ad serving allows. Selected as a highlight presentation.</p>
+        </div>
+      </li>
+
       <li class="paper">
         <div class="paper-year">2026</div>
         <div class="paper-body">
@@ -109,7 +121,7 @@
         <div class="paper-body">
           <h3>Style Classification of Hebrew Texts in Midrashic Literature</h3>
           <p class="venue">M.Sc. thesis &nbsp;·&nbsp; Tel Aviv University</p>
-          <p class="abstract">The thesis behind the papers above. Earlier, as an undergraduate at the Hebrew University: <em>Does BERT Have Common Sense?</em></p>
+          <p class="abstract">The thesis the two papers above grew out of: can a model learn the stylistic fingerprint of a midrashic school well enough to attribute a passage of disputed origin?</p>
         </div>
       </li>
     </ol>
@@ -117,204 +129,204 @@
 
   <!-- ────────────────────────────── PROJECTS ───────────────────────────── -->
   <section id="projects" class="section">
-    <h2 class="rubric">Projects</h2>
-    <p class="section-note">Weekend systems, mostly. Each one exists because something was annoying enough to fix.</p>
+    <h2 class="rubric">projects</h2>
+    <p class="section-note">Things I built outside work. Filter by topic; code and write-ups are linked on each.</p>
 
     <div class="filter" role="group" aria-label="Filter projects by topic">
-      <button type="button" data-filter="all" class="is-on" aria-pressed="true">All</button>
-      <button type="button" data-filter="llm" aria-pressed="false">LLMs</button>
-      <button type="button" data-filter="audio" aria-pressed="false">Audio</button>
-      <button type="button" data-filter="rag" aria-pressed="false">RAG</button>
-      <button type="button" data-filter="eval" aria-pressed="false">Evaluation</button>
-      <button type="button" data-filter="data" aria-pressed="false">Data forensics</button>
-      <button type="button" data-filter="hebrew" aria-pressed="false">Hebrew&nbsp;/&nbsp;Jewish&nbsp;texts</button>
-      <button type="button" data-filter="cv" aria-pressed="false">Vision</button>
+      <button type="button" data-filter="all" class="is-on" aria-pressed="true">all</button>
+      <button type="button" data-filter="llm" aria-pressed="false">llms</button>
+      <button type="button" data-filter="audio" aria-pressed="false">audio</button>
+      <button type="button" data-filter="rag" aria-pressed="false">rag</button>
+      <button type="button" data-filter="eval" aria-pressed="false">evaluation</button>
+      <button type="button" data-filter="data" aria-pressed="false">data forensics</button>
+      <button type="button" data-filter="hebrew" aria-pressed="false">hebrew texts</button>
+      <button type="button" data-filter="cv" aria-pressed="false">vision</button>
       <span class="filter-count" aria-live="polite"></span>
     </div>
 
     <ul class="projects" id="project-list">
 
-      <li class="project" data-tags="audio llm" data-stars="1">
-        <h3><a href="https://github.com/shlomota/meowify">Meowify</a></h3>
+      <li class="project card" data-tags="audio llm">
+        <h3>meowify</h3>
         <p class="blurb">Turns any song into a cat-meow cover. Demucs splits the vocal stem, an energy heuristic finds the chorus, and the vocal line comes back as meows. Built because my kids went through a meowing phase and would not stop.</p>
-        <p class="stack">Demucs · librosa · Suno · yt-dlp</p>
+        <p class="stack">demucs · librosa · suno · yt-dlp</p>
         <p class="project-links">
-          <a href="https://meowify.click">meowify.click</a>
+          <a href="https://meowify.click">live</a>
           <a href="https://github.com/shlomota/meowify">code</a>
           <a href="https://medium.com/@stannor/meowify-teaching-ai-to-meow-your-favorite-songs-fc268014d55f">write-up</a>
         </p>
       </li>
 
-      <li class="project" data-tags="audio" data-stars="7">
-        <h3><a href="https://github.com/shlomota/MeloDetective">MeloDetective</a></h3>
-        <p class="blurb">Shazam for melodies: hum a tune and it finds the recording. Demucs isolates the vocals, Melodia converts them to a pitch contour, and dynamic time warping over a vector index matches the shape of the melody rather than the audio itself — so a borrowed tune with different lyrics still matches.</p>
-        <p class="stack">Demucs · Melodia · DTW · vector search</p>
+      <li class="project card" data-tags="audio">
+        <h3>melodetective</h3>
+        <p class="blurb">Shazam for melodies: hum a tune and it finds the recording. Demucs isolates the vocals, Melodia converts them to a pitch contour, and dynamic time warping over a vector index matches the shape of the melody rather than the audio — so a borrowed tune with different lyrics still matches.</p>
+        <p class="stack">demucs · melodia · dtw · vector search</p>
         <p class="project-links">
           <a href="https://github.com/shlomota/MeloDetective">code</a>
           <a href="https://medium.com/@stannor/shazam-for-melodies-how-i-built-melodetective-with-vector-search-and-dtw-7185f54dcb56">write-up</a>
         </p>
       </li>
 
-      <li class="project" data-tags="data eval" data-stars="7">
-        <h3><a href="https://github.com/shlomota/PolymarketAnalyzer">Polymarket Analyzer</a></h3>
+      <li class="project card" data-tags="data eval">
+        <h3>polymarket analyzer</h3>
         <p class="blurb">Anomaly detection for prediction markets. Builds per-market leaderboards from trade history and flags accounts whose timing is too good — written after one account made $400K on the Maduro market over a weekend.</p>
-        <p class="stack">Python · Streamlit · Polymarket API</p>
+        <p class="stack">python · streamlit · polymarket api</p>
         <p class="project-links">
           <a href="https://github.com/shlomota/PolymarketAnalyzer">code</a>
           <a href="https://medium.com/@stannor/the-400k-maduro-trade-building-a-polymarket-anomaly-detection-tool-9d2aa6c85240">write-up</a>
         </p>
       </li>
 
-      <li class="project" data-tags="llm rag hebrew" data-stars="4">
-        <h3><a href="https://github.com/shlomota/MishnahBot">MishnahBot</a></h3>
+      <li class="project card" data-tags="llm rag hebrew">
+        <h3>mishnahbot</h3>
         <p class="blurb">Cross-lingual RAG over the Mishnah: ask in English, retrieve over the Hebrew, answer with the original text alongside. A study in what happens to retrieval quality when the query language and the corpus language disagree.</p>
-        <p class="stack">RAG · embeddings · Hebrew NLP</p>
+        <p class="stack">rag · embeddings · hebrew nlp</p>
         <p class="project-links">
           <a href="https://github.com/shlomota/MishnahBot">code</a>
           <a href="https://medium.com/data-science/exploring-rag-applications-across-languages-conversing-with-the-mishnah-16615c30f780">write-up</a>
         </p>
       </li>
 
-      <li class="project" data-tags="llm" data-stars="3">
-        <h3><a href="https://github.com/shlomota/KtuvitBot">KtuvitBot</a></h3>
+      <li class="project card" data-tags="llm">
+        <h3>ktuvitbot</h3>
         <p class="blurb">A Telegram bot that subtitles and translates any video in two clicks. Whisper transcribes, a frontier model translates, subtitles get burned in and the SRT comes back too. An <code>/enhance</code> mode runs two transcription models in parallel and merges the better parts of each; RTL fixes keep Hebrew readable.</p>
-        <p class="stack">Whisper · GPT · ffmpeg · Telegram</p>
+        <p class="stack">whisper · gpt · ffmpeg · telegram</p>
         <p class="project-links">
           <a href="https://github.com/shlomota/KtuvitBot">code</a>
           <a href="https://medium.com/data-science-collective/breaking-language-barriers-how-i-built-a-video-translation-telegram-bot-in-one-hour-db739db429f4">write-up</a>
         </p>
       </li>
 
-      <li class="project" data-tags="llm eval cv" data-stars="0">
-        <h3>Chess-puzzle VQA benchmark</h3>
+      <li class="project card" data-tags="llm eval cv">
+        <h3>chess-puzzle vqa benchmark</h3>
         <p class="blurb">Can a multimodal model read a chessboard? I scored GPT-4o, Claude, Grok and others on screenshot&nbsp;→&nbsp;FEN conversion, measuring edit distance and board-level correctness. Several models confidently promoted a pawn to a rook. Shipped as a custom GPT that turns a screenshot into an analysis link.</p>
-        <p class="stack">Multimodal eval · FEN · edit distance</p>
+        <p class="stack">multimodal eval · fen · edit distance</p>
         <p class="project-links">
           <a href="https://medium.com/@stannor/%EF%B8%8F-solve-any-chess-puzzle-instantly-evaluating-multimodal-llms-0184f68b5cda">write-up</a>
         </p>
       </li>
 
-      <li class="project" data-tags="llm" data-stars="0">
-        <h3><a href="https://github.com/shlomota/AmazonShoppingFilter">Amazon AI Shopper</a></h3>
+      <li class="project card" data-tags="llm">
+        <h3>amazon ai shopper</h3>
         <p class="blurb">A Chrome extension that filters search results by plain-English criteria — "hard plastic, for adults", "Nike only" — and strips the sponsored-adjacent noise out of the page. Bring your own API key.</p>
-        <p class="stack">Chrome extension · JavaScript · LLM filtering</p>
+        <p class="stack">chrome extension · javascript · llm filtering</p>
         <p class="project-links">
-          <a href="https://chromewebstore.google.com/detail/amazon-ai-shopper/kgeiakeallceppnaejfhekeeebjfdadc">Chrome Web Store</a>
+          <a href="https://chromewebstore.google.com/detail/amazon-ai-shopper/kgeiakeallceppnaejfhekeeebjfdadc">chrome web store</a>
           <a href="https://github.com/shlomota/AmazonShoppingFilter">code</a>
         </p>
       </li>
 
-      <li class="project" data-tags="data" data-stars="0">
-        <h3><a href="https://github.com/shlomota/WikiBiasDetector">Wiki Blame &amp; Bias Analyzer</a></h3>
+      <li class="project card" data-tags="data">
+        <h3>wiki blame</h3>
         <p class="blurb"><code>git blame</code> for Wikipedia. Binary-searches an article's revision history to find when a particular phrase first appeared, who added it, and what the edit looked like — including the awkward case where text was added, removed, and quietly restored.</p>
-        <p class="stack">MediaWiki API · binary search · Streamlit</p>
+        <p class="stack">mediawiki api · binary search · streamlit</p>
         <p class="project-links"><a href="https://github.com/shlomota/WikiBiasDetector">code</a></p>
       </li>
 
-      <li class="project" data-tags="hebrew eval" data-stars="1">
-        <h3><a href="https://github.com/shlomota/Midrash-Style-Classification">Midrash Style Classification</a></h3>
+      <li class="project card" data-tags="hebrew eval">
+        <h3>midrash style classification</h3>
         <p class="blurb">Code for the Tanhuma paper: a text-reuse engine paired with a style classifier, plus a Streamlit app that scores an arbitrary Hebrew passage for Tanhuma-style and tells you where else it shows up in the corpus.</p>
-        <p class="stack">Hebrew BERT · text reuse · Streamlit</p>
+        <p class="stack">hebrew bert · text reuse · streamlit</p>
         <p class="project-links">
           <a href="https://github.com/shlomota/Midrash-Style-Classification">code</a>
           <a href="https://arxiv.org/abs/2211.09710">paper</a>
         </p>
       </li>
 
-      <li class="project" data-tags="cv" data-stars="0">
-        <h3><a href="https://github.com/shlomota/AtariHacker">AtariHacker</a></h3>
+      <li class="project card" data-tags="cv">
+        <h3>atarihacker</h3>
         <p class="blurb">Beating an Atari game with classical computer vision and no learning at all — detect the blocks, predict the crossing, press the button. A useful reminder of what a well-chosen heuristic still buys you.</p>
-        <p class="stack">OpenCV · motion prediction</p>
+        <p class="stack">opencv · motion prediction</p>
         <p class="project-links"><a href="https://github.com/shlomota/AtariHacker">code</a></p>
       </li>
 
     </ul>
-    <p class="empty" hidden>Nothing under that topic yet. <button type="button" data-filter-reset>Show everything</button></p>
-    <p class="more"><a href="https://github.com/shlomota?tab=repositories">All 30&nbsp;repositories on GitHub →</a></p>
+    <p class="empty" hidden>Nothing under that topic yet. <button type="button" data-filter-reset>show everything</button></p>
+    <p class="more"><a href="https://github.com/shlomota?tab=repositories">all 30 repositories on github →</a></p>
   </section>
 
   <!-- ─────────────────────────────── WRITING ───────────────────────────── -->
   <section id="writing" class="section">
-    <h2 class="rubric">Writing</h2>
+    <h2 class="rubric">writing</h2>
     <p class="section-note">Build logs, mostly — what broke and what the fix taught me. <a href="https://medium.com/@stannor">All posts on Medium</a>.</p>
     <ul class="writing">
       <li>
-        <span class="date">May 2026</span>
+        <span class="date">2026.05</span>
         <a href="https://medium.com/@stannor/meowify-teaching-ai-to-meow-your-favorite-songs-fc268014d55f">Meowify — Teaching AI to Meow Your Favorite Songs</a>
-        <span class="where">Personal</span>
+        <span class="where">personal</span>
       </li>
       <li>
-        <span class="date">Jan 2026</span>
+        <span class="date">2026.01</span>
         <a href="https://medium.com/@stannor/the-400k-maduro-trade-building-a-polymarket-anomaly-detection-tool-9d2aa6c85240">The $400K Maduro Trade: Building a Polymarket Anomaly Detection Tool</a>
-        <span class="where">Personal</span>
+        <span class="where">personal</span>
       </li>
       <li>
-        <span class="date">Jul 2025</span>
+        <span class="date">2025.07</span>
         <a href="https://medium.com/@stannor/%EF%B8%8F-solve-any-chess-puzzle-instantly-evaluating-multimodal-llms-0184f68b5cda">Solve Any Chess Puzzle Instantly: Evaluating Multimodal LLMs</a>
-        <span class="where">Personal</span>
+        <span class="where">personal</span>
       </li>
       <li>
-        <span class="date">Mar 2025</span>
+        <span class="date">2025.03</span>
         <a href="https://medium.com/data-science-collective/breaking-language-barriers-how-i-built-a-video-translation-telegram-bot-in-one-hour-db739db429f4">Breaking Language Barriers: A Video Translation Telegram Bot in One Hour</a>
-        <span class="where">Data Science Collective</span>
+        <span class="where">data science collective</span>
       </li>
       <li>
-        <span class="date">Jul 2024</span>
+        <span class="date">2024.07</span>
         <a href="https://medium.com/@stannor/shazam-for-melodies-how-i-built-melodetective-with-vector-search-and-dtw-7185f54dcb56">Shazam for Melodies: Building MeloDetective with Vector Search and DTW</a>
-        <span class="where">Personal</span>
+        <span class="where">personal</span>
       </li>
       <li>
-        <span class="date">May 2024</span>
+        <span class="date">2024.05</span>
         <a href="https://medium.com/data-science/exploring-rag-applications-across-languages-conversing-with-the-mishnah-16615c30f780">Exploring RAG Applications Across Languages: Conversing with the Mishnah</a>
-        <span class="where">Towards Data Science</span>
+        <span class="where">towards data science</span>
       </li>
     </ul>
   </section>
 
   <!-- ───────────────────────────── BACKGROUND ──────────────────────────── -->
   <section id="background" class="section">
-    <h2 class="rubric">Background</h2>
+    <h2 class="rubric">background</h2>
 
     <ol class="cv">
       <li>
-        <div class="cv-when">2024&ndash;</div>
+        <div class="cv-when">2024 —</div>
         <div class="cv-what">
-          <h3>Applied Scientist &nbsp;<span class="org">Amazon</span></h3>
-          <p>Agent evaluation and benchmarking for DevOps and SRE workflows. Earlier: agents and LLMs for real-time personalised advertising and brand intelligence.</p>
+          <h3>Applied Scientist <span class="org">Amazon</span></h3>
+          <p>Harnesses, evaluation, and benchmarking for DevOps and SRE agents. Earlier: agents and LLMs for real-time personalised advertising and brand intelligence.</p>
         </div>
       </li>
       <li>
-        <div class="cv-when">2021&ndash;24</div>
+        <div class="cv-when">2021 — 24</div>
         <div class="cv-what">
-          <h3>AI Researcher &nbsp;<span class="org">Check Point</span></h3>
+          <h3>AI Researcher <span class="org">Check Point</span></h3>
           <p>Fine-tuned transformers and LLMs for malicious-email detection, and built end-to-end anomaly detection for compromised accounts — protecting millions of users from financial fraud.</p>
         </div>
       </li>
       <li>
-        <div class="cv-when">2020&ndash;22</div>
+        <div class="cv-when">2020 — 22</div>
         <div class="cv-what">
-          <h3>M.Sc. Computer Science &nbsp;<span class="org">Tel Aviv University</span></h3>
+          <h3>M.Sc. Computer Science <span class="org">Tel Aviv University</span></h3>
           <p>Thesis in NLP on style classification of Hebrew midrashic literature. Graduated 94.3.</p>
         </div>
       </li>
       <li>
         <div class="cv-when">2020</div>
         <div class="cv-what">
-          <h3>Data Science Intern &nbsp;<span class="org">Diagnostic Robotics</span></h3>
+          <h3>Data Science Intern <span class="org">Diagnostic Robotics</span></h3>
           <p>Medical entity extraction from unstructured clinical text; models for patient diagnosis prediction.</p>
         </div>
       </li>
       <li>
-        <div class="cv-when">2018&ndash;20</div>
+        <div class="cv-when">2018 — 20</div>
         <div class="cv-what">
-          <h3>B.Sc. Computer Science &nbsp;<span class="org">Hebrew University of Jerusalem</span></h3>
-          <p><em>Magna cum laude</em>, 93.5. Research project: <em>Does BERT Have Common Sense?</em></p>
+          <h3>B.Sc. Computer Science <span class="org">Hebrew University of Jerusalem</span></h3>
+          <p><em>Magna cum laude</em>, 93.5, with extra coursework in machine learning and NLP.</p>
         </div>
       </li>
       <li>
-        <div class="cv-when">2013&ndash;18</div>
+        <div class="cv-when">2013 — 18</div>
         <div class="cv-what">
-          <h3>Software Engineer &nbsp;<span class="org">Unit 8200</span></h3>
+          <h3>Software Engineer <span class="org">Unit 8200</span></h3>
           <p>Cybersecurity tooling for network analysis across Windows, Linux, Android and embedded targets. Ran operations end to end; taught the incoming cohort of 35.</p>
         </div>
       </li>
@@ -322,12 +334,10 @@
   </section>
 
   <footer class="colophon">
-    <p>
-      <a href="https://github.com/shlomota">GitHub</a> ·
-      <a href="https://medium.com/@stannor">Medium</a> ·
-      <a href="https://www.linkedin.com/in/shlomo-tannor-aa967a1a8/">LinkedIn</a>
-    </p>
-    <p class="fine">Set in EB&nbsp;Garamond and IBM&nbsp;Plex&nbsp;Mono. No trackers, no cookies, one stylesheet. Views are my own.</p>
+    <a href="mailto:stannor@gmail.com">stannor@gmail.com</a>
+    <a href="https://github.com/shlomota">github</a>
+    <a href="https://medium.com/@stannor">medium</a>
+    <a href="https://www.linkedin.com/in/shlomo-tannor-aa967a1a8/">linkedin</a>
   </footer>
 
 </main>

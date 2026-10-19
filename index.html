@@ -59,19 +59,19 @@
     <h2 class="rubric">now</h2>
     <div class="prose">
       <p>An agent gets paged, reads the telemetry, and proposes a mitigation. My work is the half that comes after: <em>how do you know it worked?</em></p>
-      <p>Agent evaluation is harder than model evaluation. A trajectory can reach the right answer through reasoning you would never ship, or fail for reasons that have nothing to do with the model. So most of my time goes into measurement that survives contact with production.</p>
+      <p>Agent evaluation is harder than model evaluation. A trajectory can reach the right answer through reasoning you would never ship, or fail for reasons that have nothing to do with the model. So most of my time goes into designing benchmarks and evaluations that show where a model or a harness genuinely shines and where it falls short &mdash; read off real trajectories rather than synthetic proxies.</p>
       <dl class="facets">
         <div>
           <dt>harnesses</dt>
-          <dd>Agentic harnesses that run and read real agent trajectories — the scaffolding that makes behaviour in a live environment measurable at all.</dd>
+          <dd>Agentic harnesses that run and read real agent trajectories &mdash; the scaffolding that turns a production run into something you can actually learn from.</dd>
         </div>
         <div>
           <dt>evaluation</dt>
-          <dd>Offline suites and scalable online evaluation: did the proposed SRE mitigation actually resolve the incident, or did it only look plausible?</dd>
+          <dd>Offline suites and scalable online evaluation designed to separate a plausible-looking answer from an SRE mitigation that genuinely resolved the incident.</dd>
         </div>
         <div>
           <dt>benchmarks</dt>
-          <dd>Benchmarks for DevOps agents that discriminate between versions and keep holding up once real customer traffic is in the loop.</dd>
+          <dd>Benchmarks that discriminate between agent versions and name the specific shortcoming behind a regression, rather than reporting one aggregate score.</dd>
         </div>
       </dl>
       <p class="aside">Before Amazon: three years at Check Point training transformers to catch malicious email and account takeover, at a scale where false positives are expensive and attackers adapt weekly.</p>

@@ -176,6 +176,9 @@ main {
   text-wrap: pretty;
 }
 .standfirst strong { color: var(--text); font-weight: 600; }
+.standfirst a { color: inherit; border-bottom: 1px solid var(--accent-dim); }
+.standfirst a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.standfirst a:hover strong { color: var(--accent); }
 
 /* ---------- section headings ---------- */
 
@@ -203,7 +206,7 @@ main {
 .facets { margin: 1.75rem 0; padding: 0; display: grid; gap: .6rem; }
 .facets > div {
   display: grid;
-  grid-template-columns: 9rem 1fr;
+  grid-template-columns: 10.5rem 1fr;
   gap: 0 1.25rem;
   background: var(--panel);
   border: 1px solid var(--line);

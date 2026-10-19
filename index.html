@@ -59,27 +59,27 @@
         <li><a href="https://www.linkedin.com/in/shlomo-tannor-aa967a1a8/">linkedin</a></li>
       </ul>
     </div>
-    <p class="standfirst">I work on the science behind the <strong>AWS DevOps Agent</strong> &mdash; harnesses, evaluations, and benchmarks for agents operating in live production environments.</p>
+    <p class="standfirst">I work on the science behind the <a href="https://aws.amazon.com/devops-agent/"><strong>AWS DevOps Agent</strong></a> &mdash; harnesses, evaluations, and benchmarks for agents operating in live production environments.</p>
   </header>
 
   <!-- ───────────────────────────────── NOW ─────────────────────────────── -->
   <section id="now" class="section">
     <h2 class="rubric">now</h2>
     <div class="prose">
-      <p>An agent gets paged, reads the telemetry, and proposes a mitigation. My work is the half that comes after: <em>how do you know it worked?</em></p>
-      <p>Agent evaluation is harder than model evaluation. A trajectory can reach the right answer through reasoning you would never ship, or fail for reasons that have nothing to do with the model. So most of my time goes into designing benchmarks and evaluations that show where a model or a harness genuinely shines and where it falls short &mdash; read off real trajectories rather than synthetic proxies.</p>
+      <p>The <a href="https://aws.amazon.com/devops-agent/">AWS DevOps Agent</a> gets paged, investigates, and proposes a mitigation. My team works across the whole system: harness optimization, memory and context management, latency, and tuning both the harness and the model for accuracy.</p>
+      <p>My own focus right now is evaluation, because it is what puts the rest of that work in context. Benchmarks and evals built on real trajectories are what tell you which change actually moved the result, where a model or a harness is strong, and where it still falls short.</p>
       <dl class="facets">
         <div>
-          <dt>harnesses</dt>
-          <dd>Agentic harnesses that run and read real agent trajectories &mdash; the scaffolding that turns a production run into something you can actually learn from.</dd>
-        </div>
-        <div>
           <dt>evaluation</dt>
-          <dd>Offline suites and scalable online evaluation designed to separate a plausible-looking answer from an SRE mitigation that genuinely resolved the incident.</dd>
+          <dd>Offline suites and scalable online evaluation built on real agent trajectories &mdash; designed to separate a plausible-looking answer from an SRE mitigation that genuinely resolved the incident.</dd>
         </div>
         <div>
           <dt>benchmarks</dt>
           <dd>Benchmarks that discriminate between agent versions and name the specific shortcoming behind a regression, rather than reporting one aggregate score.</dd>
+        </div>
+        <div>
+          <dt>harness &amp; context</dt>
+          <dd>Shared across the team: what the agent remembers and how its context gets assembled, and cutting latency without giving up accuracy.</dd>
         </div>
       </dl>
       <p class="aside">Before Amazon: three years at Check Point training transformers to catch malicious email and account takeover, at a scale where false positives are expensive and attackers adapt weekly.</p>
